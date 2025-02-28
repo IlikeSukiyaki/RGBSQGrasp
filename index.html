@@ -151,32 +151,64 @@
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/RGBGrasp.png" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Overview of the RGBSQGrasp framework. (1) Dataset generation using cross-platform simulators to create partial point clouds and superquadric ground truth pairs, (2) Superquadric fitting network with local and global feature extraction, (3) Object scene understanding using RGB image scan, depth estimation, and superquadric primitive fitting, and (4) Deployment in a real bin-picking experimental setup with a UR5e manipulator and RGB camera for grasp pose execution.
-        </h2>
+        <div class="item">
+          <img src="static/images/RGBGrasp.png" alt="MY ALT TEXT" class="carousel-image"/>
+          <h2 class="subtitle has-text-centered carousel-caption">
+            Overview of the RGBSQGrasp framework. (1) Dataset generation using cross-platform simulators to create partial point clouds and superquadric ground truth pairs, (2) Superquadric fitting network with local and global feature extraction, (3) Object scene understanding using RGB image scan, depth estimation, and superquadric primitive fitting, and (4) Deployment in a real bin-picking experimental setup with a UR5e manipulator and RGB camera for grasp pose execution.
+          </h2>
+        </div>
+        <div class="item">
+          <img src="static/images/Grasp_pipeline_web.png" alt="MY ALT TEXT" class="carousel-image"/>
+          <h2 class="subtitle has-text-centered carousel-caption">
+            Illustration of a sequential rollout of the superquadrics-guided robotic grasping process. The red point cloud represents the superquadric fitting for each partial point cloud, while the green vector denotes the grasp sampled from the fitted superquadrics. The top row visualizes the grasping sequence, and the bottom row depicts the evolving scene state after each step.
+          </h2>
+        </div>
+        <div class="item">
+          <img src="static/images/grasp_sample.png" alt="MY ALT TEXT" class="carousel-image"/>
+          <h2 class="subtitle has-text-centered carousel-caption">
+            Grasp sampling workflow: Grasp candidates are generated based on superquadric fitting, with selection prioritized from high-quality regions and proximity to the object's center of mass (COM) to ensure stable execution.
+          </h2>
+        </div>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/Grasp_pipeline_web.png" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Illustration of a sequential rollout of the superquadrics-guided robotic grasping process. The red point cloud represents the superquadric fitting for each partial point cloud, while the green vector denotes the grasp sampled from the fitted superquadrics. The top row visualizes the grasping sequence, and the bottom row depicts the evolving scene state after each step
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/grasp_sample.png" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Grasp sampling workflow: Grasp candidates are generated based on superquadric fitting, with selection prioritized from high-quality regions and proximity to the object's center of mass (COM) to ensure stable execution.
-       </h2>
-     </div>
+    </div>
   </div>
-</div>
-</div>
 </section>
 <!-- End image carousel -->
+
+<style>
+  /* Container for the carousel */
+  .carousel {
+    position: relative;
+    max-width: 800px; /* Adjust the max-width as needed */
+    margin: 0 auto;
+  }
+
+  /* Styling for the images */
+  .carousel-image {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+  }
+
+  /* Styling for the captions */
+  .carousel-caption {
+    margin-top: 16px; /* Space between image and caption */
+    font-size: 16px; /* Adjust font size as needed */
+    line-height: 1.5; /* Improve readability */
+    color: #333; /* Adjust text color */
+    padding: 8px 16px; /* Add some padding */
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    border-radius: 4px; /* Optional: Add rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+  }
+
+  /* Optional: Add hover effect to images */
+  .carousel-image:hover {
+    transform: scale(1.02); /* Slightly enlarge the image on hover */
+    transition: transform 0.3s ease;
+  }
+</style>
   
   <footer class="footer">
     <div class="container">
